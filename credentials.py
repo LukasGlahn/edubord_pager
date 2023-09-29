@@ -11,6 +11,6 @@ credentials = {
     'password' : '',
     'ADAFRUIT_IO_URL' : b'io.adafruit.com',
     'ADAFRUIT_USERNAME' : b'lukasglahn',
-    'ADAFRUIT_IO_KEY' : b'aio_StPo69Itz0T8MJluMDnVTXTExnVk',
+    'ADAFRUIT_IO_KEY' : b'',
     'ADAFRUIT_IO_FEEDNAME' : b'ESP23pager'
     }
