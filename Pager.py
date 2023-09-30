@@ -146,17 +146,18 @@ def text_loop():
         mqtt.sync_with_adafruitIO()
 
 #engangs kode
-mqtt.web_print('#/')
+#prøv at sykroniser beskeder med andre bords på nætværket
+mqtt.web_print('#/')#send #/ som spør alle andre på nætværket om ders besked liste.
 sleep(2.2)
 for vænt in range (10):
     mqtt.sync_with_adafruitIO()
-    if mqtt.besked[0:2] == '#&':
+    if mqtt.besked[0:2] == '#&':#hvis et svar kommer tilbage vil det starte med #& og så kommer listen efter som en string
         print('fik et svar')
-        full_list = mqtt.besked.split(',')
-        besked_liste = full_list[1:]
+        full_list = mqtt.besked.split(',')#lav stringen om til en liste
+        besked_liste = full_list[1:]#lav svar listen om til vores besked liste og fjern #& fra listen
         break
     sleep(0.3)
-mqtt.web_print('#')
+mqtt.web_print('#')#send et # for at ungå at modtage den siste besked og lave problemer nå du kommer ind i main looped
 
 #vælg brugernavn
 while True:
